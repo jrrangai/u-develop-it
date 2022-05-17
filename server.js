@@ -44,7 +44,7 @@ app.get('/api/candidates', (req, res) => {
 //  Select a single candidate
 app.get('/api/candidate/:id', (req, res) => {
     const sql = `
-    SELECT candidate.*, parties.name
+    SELECT candidates.*, parties.name
     AS party_name
     FROM candidates
     LEFT JOIN parties
